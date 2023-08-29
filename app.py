@@ -19,9 +19,13 @@ chrome_options.add_experimental_option("prefs", {
 
 chrome_options.add_argument("--headless")
 # driver = webdriver.Chrome(chrome_options=chrome_options)
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options= chrome_options)
+try:
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options= chrome_options)
+except:
+    service = Service('chromedriver.exe')
+    driver = webdriver.Chrome(service=service, options= chrome_options)
 url_base = 'https://www.bcp.gov.py/'
-url = "https://www.bcp.gov.py/boletines-estadisticos-i62"
+url = "https://www.bcp.gov.py/boletines-estadistico-financieros-formato-anterior-i1404"
 driver.get(url)
 content = driver.page_source
 soup = BeautifulSoup(content, 'html.parser')
