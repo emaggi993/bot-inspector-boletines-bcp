@@ -1,4 +1,5 @@
 {
     "correos": ["emaggi@mf.com.py","iherrera@mf.com.py", "vlezcano@mf.com.py", "ecabanas@mf.com.py"],
+    "correos_bk": ["emaggi@mf.com.py"],
     "email_emisor":"esrma3010@gmail.com"
 }
