@@ -12,7 +12,7 @@ def main():
     current_dateTime = datetime.now()
    
     url = "https://www.bcp.gov.py/boletines-estadistico-financieros-formato-anterior-i1404"
-    url_base = "https://www.bcp.gov.py"
+    url_base = "https://www.bcp.gov.py/"
     user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
     content = requests.get(url, headers={'User-Agent': user_agent}).text
     soup = BeautifulSoup(content, 'html.parser')
